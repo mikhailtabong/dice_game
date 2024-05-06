@@ -42,3 +42,6 @@ def play_turn():
                 break
         else:
             break
+
+    print(f"Turn ends with a score of {score} points.")
+    return score
