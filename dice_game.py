@@ -45,3 +45,27 @@ def play_turn():
 
     print(f"Turn ends with a score of {score} points.")
     return score
+
+# main game loop :D
+def play_game():
+    num_players = int(input("Enter the number of players: "))
+    target_score = int(input("Enter the target score to reach: "))
+
+    player_scores = [0] * num_players
+
+    # The game loop
+    while True:
+        for player in range(num_players):
+            print(f"\nPlayer {player+1}'s turn:")
+            player_scores[player] += play_turn()
+            print(f"Player {player+1}'s score: {player_scores[player]}")
+            return
+    
+    # Check if the player has reached the target score
+            if player_scores[player] >= target_score:
+                print(f"\nPlayer {player+1} wins!")
+                return
+
+# Start the game
+play_game()
+    
