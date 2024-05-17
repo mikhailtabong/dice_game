@@ -23,7 +23,7 @@ def play_turn():
         print(f"Dice rolled: {dice}")
         
         # Check if all three dice are the same (tuple out)
-        if dice[0] == dice[1] == dice[2]:
+        if dice[0] == dice[1] == dice[2]: 
             print("Tuple out! Turn ends with 0 points.")
             return 0
         
