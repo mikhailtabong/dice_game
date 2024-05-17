@@ -3,7 +3,7 @@
 import os
 import random
 
-from dice_module import roll_dice #Imports the roll_dice function from the module
+from dice_module import roll_dice # Imports the roll_dice function from the module
 
 print("Welcome to my Dice Game!")
 
@@ -45,6 +45,7 @@ def play_turn():
 def play_game():
     num_players = int(input("Enter the number of players: "))
     target_score = int(input("Enter the target score to reach: "))
+    total_turns = 0 # New variable to keep track of the total number of turns
 
     player_scores = [0] * num_players
 
@@ -54,12 +55,16 @@ def play_game():
             print(f"\nPlayer {player+1}'s turn:")
             player_scores[player] += play_turn()
             print(f"Player {player+1}'s score: {player_scores[player]}")
-            return
+            total_turns += 1  # Increment the total number of turns
     
-    # Check if the player has reached the target score
+            # Check if the player has reached the target score
             if player_scores[player] >= target_score:
                 print(f"\nPlayer {player+1} wins!")
                 return
+            
+        # Check if the total number of turns has reached 5
+        if total_turns >= 5:
+            break
 
 # Start the game
 play_game()
