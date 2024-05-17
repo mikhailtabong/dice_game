@@ -3,14 +3,9 @@
 import os
 import random
 
-print("Welcome to my Dice Game!")
+from dice_module import roll_dice #Imports the roll_dice function from the module
 
-# Function to roll the dice
-def roll_dice():
-    die1 = random.randint(1, 6) 
-    die2 = random.randint(1, 6)
-    die3 = random.randint(1, 6)
-    return die1, die2, die3
+print("Welcome to my Dice Game!")
 
 # Function to play a turn
 def play_turn():
