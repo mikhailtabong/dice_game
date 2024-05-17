@@ -57,7 +57,6 @@ def play_game():
             print(f"\nPlayer {player+1}'s turn:")
             player_scores[player] += play_turn()
             print(f"Player {player+1}'s score: {player_scores[player]}")
-            total_turns += 1  # Increment the total number of turns
     
             # Check if the player has reached the target score
             if player_scores[player] >= target_score:
@@ -66,6 +65,7 @@ def play_game():
 
         # Increment the current turn after all players have gone once
         current_turn += 1
+        total_turns += 1  # Increment the total number of turns
 
         # Check if the total number of turns has reached 5
         if total_turns >= 5:
@@ -78,13 +78,6 @@ def play_game():
         print(f"\nPlayer {winners[0]} wins with a score of {max_score}!")
     else:
         print(f"\nIt's a tie! Players {', '.join(map(str, winners))} have the highest score of {max_score}.")
-
-    # Prompt players if they want to play again
-    play_again = input("Do you want to play again? (y/n): ")
-    if play_again.lower() == 'y':
-        play_game()
-    else:
-        print("Thanks for playing!")
 
 # Start the game
 while True: # Continuously calls 'play_game' until the players choose not to play again
