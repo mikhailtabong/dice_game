@@ -65,6 +65,11 @@ def play_game():
         # Check if the total number of turns has reached 5
         if total_turns >= 5:
             break
+    
+    # Prompt players if they want to play again
+    play_again = input("Do you want to play again? (y/n): ")
+    if play_again.lower() == 'y':
+        play_game()
 
 # Start the game
 play_game()
