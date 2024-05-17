@@ -1,4 +1,4 @@
-# Tuple Out Dice Game Consolidation Project
+# 'Tuple Out' Dice Game
 
 ## Overview
 
@@ -43,4 +43,4 @@ The Tuple Out Dice Game is a multiplayer game where players take turns rolling t
 
 10. After the game ends, you will be prompted to play again. Enter 'y' to start a new game or 'n' to exit.
 
-Enjoy playing the Tuple Out Dice Game!
+**Enjoy playing the Tuple Out Dice Game!**
