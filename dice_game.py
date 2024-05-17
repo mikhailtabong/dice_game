@@ -87,5 +87,11 @@ def play_game():
         print("Thanks for playing!")
 
 # Start the game
-play_game()
+while True: # Continuously calls 'play_game' until the players choose not to play again
+    play_game()
     
+    # Prompt players if they want to play again
+    play_again = input("Do you want to play again? (y/n): ")
+    if play_again.lower() != 'y':
+        print("Thanks for playing!")
+        break
