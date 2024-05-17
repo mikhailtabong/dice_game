@@ -56,7 +56,7 @@ def play_game():
         for player in range(num_players):
             print(f"\nPlayer {player+1}'s turn:")
             player_scores[player] += play_turn()
-            print(f"Player {player+1}'s score: {player_scores[player]}")
+            print(f"Player {player+1}'s total score: {player_scores[player]}")
     
             # Check if the player has reached the target score
             if player_scores[player] >= target_score:
