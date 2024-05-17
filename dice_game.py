@@ -7,7 +7,7 @@ print("Welcome to my Dice Game!")
 
 # Function to roll the dice
 def roll_dice():
-    die1 = random.randint(1, 6)
+    die1 = random.randint(1, 6) 
     die2 = random.randint(1, 6)
     die3 = random.randint(1, 6)
     return die1, die2, die3
