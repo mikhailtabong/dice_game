@@ -66,10 +66,20 @@ def play_game():
         if total_turns >= 5:
             break
     
+    # Determines the winner if the target score wasn't reached
+    max_score = max(player_scores)
+    winners = [player + 1 for player, score in enumerate(player_scores) if score == max_score]
+    if len(winners) == 1:
+        print(f"\nPlayer {winners[0]} wins with a score of {max_score}!")
+    else:
+        print(f"\nIt's a tie! Players {', '.join(map(str, winners))} have the highest score of {max_score}.")
+
     # Prompt players if they want to play again
     play_again = input("Do you want to play again? (y/n): ")
     if play_again.lower() == 'y':
         play_game()
+    else:
+        print("Thanks for playing!")
 
 # Start the game
 play_game()
